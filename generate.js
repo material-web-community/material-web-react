@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require('fs').promises
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('node:fs').promises
+const path = require('node:path')
+const { execSync } = require('node:child_process')
 
 /**
  * A constant variable that holds the URL of the Material Web repository.
@@ -405,14 +405,14 @@ async function createOutputStructure(components) {
     console.log(`Generated ${indexPath}`)
 
     // Collect exports for main index
-    component.variants.forEach(variant => {
+    for (const variant of component.variants) {
       allExports.push({
         componentName: variant.className,
         propsName: `${variant.className}Props`,
         elementName: `${variant.className}Element`,
         folder: component.name,
       })
-    })
+    }
   }
 
   // Generate main index.ts
