@@ -35,7 +35,7 @@ jobs:
     - name: Check for changes
       id: verify-changed-files
       run: |
-        if [ -n "$(git status --porcelain)" ]; then
+        if [ -n "$(git status --porcelain src/)" ]; then
           echo "changed=true" >> $GITHUB_OUTPUT
         else
           echo "changed=false" >> $GITHUB_OUTPUT
@@ -57,3 +57,5 @@ jobs:
           Please review the changes and merge if they look correct.
         branch: update-wrappers
         delete-branch: true
+        add-paths: |
+          src/
