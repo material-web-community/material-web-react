@@ -1,0 +1,48 @@
+{
+  "name": "@material-web-community/material-web-react",
+  "version": "1.0.0",
+  "description": "Material Web Community - React",
+  "homepage": "https://github.com/material-web-community/material-web-react#readme",
+  "bugs": {
+    "url": "https://github.com/material-web-community/material-web-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-web-community/material-web-react.git"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "material",
+    "material design",
+    "design system",
+    "components",
+    "web components",
+    "lit",
+    "react",
+    "react-components",
+    "material-react"
+  ],
+  "dependencies": {
+    "@fontsource/roboto": "^5.1.0",
+    "@lit/react": "^1.0.6",
+    "@material/web": "^2.2.0",
+    "material-symbols": "^0.34.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "copyfiles": "^2.4.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.4.3"
+  },
+  "scripts": {
+    "build": "tsc && copyfiles -u 1 src/**/*.tsx dist/",
+    "build:clean": "rimraf dist && npm run build",
+    "typecheck": "tsc --noEmit",
+    "generate": "node generate.js && npm run format",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check ."
+  }
+}
