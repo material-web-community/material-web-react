@@ -22,10 +22,19 @@
     "react-components",
     "material-react"
   ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./styles": "./dist/styles.css",
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@fontsource/roboto": "^5.1.0",
     "@lit/react": "^1.0.6",
-    "@material/web": "^2.2.0",
+    "@material/web": "^2.4.0",
     "material-symbols": "^0.34.1"
   },
   "devDependencies": {
@@ -37,7 +46,7 @@
     "typescript": "^5.4.3"
   },
   "scripts": {
-    "build": "tsc && copyfiles -u 1 src/**/*.tsx dist/",
+    "build": "tsc && copyfiles -u 1 src/**/*.tsx src/**/*.css dist/",
     "build:clean": "rimraf dist && npm run build",
     "typecheck": "tsc --noEmit",
     "generate": "node generate.js && npm run format",
