@@ -30,7 +30,7 @@ jobs:
       run: npm ci
 
     - name: Generate wrappers
-      run: node generate.js
+      run: npm run generate
 
     - name: Check for changes
       id: verify-changed-files
@@ -50,10 +50,10 @@ jobs:
         title: "chore: regenerate wrappers"
         body: |
           This PR was automatically created by the nightly wrapper generation workflow.
-          
+
           The following changes were detected:
           - Updated wrapper files from generate.js
-          
+
           Please review the changes and merge if they look correct.
         branch: update-wrappers
         delete-branch: true
