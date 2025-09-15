@@ -32,7 +32,7 @@
     "dist"
   ],
   "dependencies": {
-    "@fontsource/roboto": "^5.1.0",
+    "@fontsource/roboto": "^5.2.7",
     "@lit/react": "^1.0.6",
     "@material/web": "^2.4.0",
     "material-symbols": "^0.35.0"
