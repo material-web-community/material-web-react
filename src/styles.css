@@ -1,8 +1,8 @@
-@import 'material-symbols';
-@import '@fontsource/roboto';
+@import "material-symbols";
+@import "@fontsource/roboto";
 
 .material-symbols-rounded {
-  font-family: 'Material Symbols Rounded', serif;
+  font-family: "Material Symbols Rounded", serif;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -13,12 +13,12 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
+  -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
 
 .material-symbols-sharp {
-  font-family: 'Material Symbols Sharp', serif;
+  font-family: "Material Symbols Sharp", serif;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -29,18 +29,18 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
+  -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
 
 md-icon[filled] {
-  font-variation-settings: 'FILL' 1;
+  font-variation-settings: "FILL" 1;
 }
 
 md-icon.rounded {
-  --md-icon-font: 'Material Symbols Rounded';
+  --md-icon-font: "Material Symbols Rounded";
 }
 
 md-icon.sharp {
-  --md-icon-font: 'Material Symbols Sharp';
+  --md-icon-font: "Material Symbols Sharp";
 }
